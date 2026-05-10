@@ -12,6 +12,10 @@ app.use(cors());
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("AI Summarizer Backend Running");
+});
+
 app.use("/api", summarizeRoutes);
 
 const PORT = process.env.PORT || 5000;
